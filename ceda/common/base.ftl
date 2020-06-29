@@ -1,4 +1,4 @@
-<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false displayWide=false showAnotherWayIfPresent=true>
+<#macro baseLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false displayWide=false showAnotherWayIfPresent=true>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,9 +15,19 @@
     <link rel="stylesheet" href="https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.2/_assets/css/custom.min.css">
     <link rel="stylesheet" href="https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.2/_assets/css/org-custom.css">
 
-    <link href="${url.resourcesPath}/css/login.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <#if properties.styles?has_content>
+        <#list properties.styles?split(' ') as style>
+            <link href="${url.resourcesPath}/${style}" rel="stylesheet" />
+        </#list>
+    </#if>
+    <#if properties.scripts?has_content>
+        <#list properties.scripts?split(' ') as script>
+            <script type="text/javascript" src="${url.resourcesPath}/${script}"></script>
+        </#list>
+    </#if>
 
   </head>
   <body id="body">
@@ -86,7 +96,7 @@
       <div class="row">
           <div class="col-md-12">
 
-            <#nested "form">
+            <#nested "content">
 
           </div>
       </div>
