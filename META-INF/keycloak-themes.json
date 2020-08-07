@@ -1,6 +1,6 @@
 {
     "themes": [{
         "name" : "ceda",
-        "types": [ "login", "account" ]
+        "types": [ "common", "login", "account" ]
     }]
 }

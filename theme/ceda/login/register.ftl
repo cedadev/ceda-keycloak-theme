@@ -10,16 +10,14 @@
     <div class="mb-2 mt-4">
         <h4>Personal details</h4>
         <div class="form-row form-row">
-            <div class="formColumn form-group col-md-6 mb-0" >
+            <div class="formColumn form-group col-md-12 mb-0" >
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
                     <input name="" class="form-control" placeholder="Surname *" type="text">
+                    <input name="" class="form-control" placeholder="Other names *" type="text">
                 </div>
-            </div>
-            <div class="formColumn form-group col-md-6 mb-0">
-                <input name="" class="form-control" placeholder="Other names *" type="text">
             </div>
         </div>
         <div class="form-group">
@@ -72,24 +70,24 @@
             <input name="" class="form-control" placeholder="Username" type="text">
         </div>
         <div class="form-row form-row">
-            <div class="formColumn form-group col-md-6 mb-0" >
+            <div class="formColumn form-group col-md-12 mb-0" >
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
                     <input name="" class="form-control" placeholder="Create password *" type="text">
+                    <input name="" class="form-control" placeholder="Repeat password *" type="text">
                 </div>
-            </div>
-            <div class="formColumn form-group col-md-6 mb-0">
-                <input name="" class="form-control" placeholder="Repeat password *" type="text">
             </div>
         </div>
     </div>
-    <p>Before proceeding, you must confirm that you are over the age of 18 and have read and agree with our <a href="">terms and conditions</a></p>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+    <div class="mt-3">
+        <p>Before proceeding, you must confirm that you are over the age of 18 and have read and agree with our <a href="">terms and conditions</a></p>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+        </div>
+        <p class="text-center">Have an account? <a href="">Log In</a> </p>
     </div>
-    <p class="text-center">Have an account? <a href="">Log In</a> </p>
 </form>
 </div>
 </#if>
