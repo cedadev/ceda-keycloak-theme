@@ -52,7 +52,11 @@
                 <small class="form-text text-muted">The name of the instition you are associated with</small>
             </div>
             <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="Institute type">
+                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="">
+                    <option selected><span class="text-muted">Select institute type...</span></option>
+                    <option value="Academic">Academic</option>
+                    <option value="Commercial">Commercial</option>
+                </select>
                 <small class="form-text text-muted">The type of institution, e.g. "Academic"</small>
             </div>
             <div class="form-group col-md-4">
