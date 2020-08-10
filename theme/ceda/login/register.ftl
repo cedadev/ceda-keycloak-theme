@@ -6,7 +6,7 @@
 <#if section = "form">
 <div class="">
 <h1 class="text-center">Create a CEDA Account</h1>
-<form  method="post">
+<form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
     <div class="mb-2 mt-4">
         <h4>Personal details</h4>
         <div class="form-row form-row">
@@ -15,8 +15,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Surname *" type="text">
-                    <input name="" class="form-control" placeholder="Other names *" type="text">
+                    <input type="text" id="lastName" class="${properties.kcInputClass!}" name="lastName" value="${(register.formData.lastName!'')}" placeholder="${msg('lastName')} *">
+                    <input type="text" id="firstName" class="${properties.kcInputClass!}" name="firstName" value="${(register.formData.firstName!'')}" placeholder="${msg('firstName')} *">
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                 </div>
-                <input name="" class="form-control" placeholder="Email address *" type="text">
+                <input type="text" id="email" class="${properties.kcInputClass!}" name="email" value="${(register.formData.email!'')}" autocomplete="email" placeholder="${msg('email')} *">
             </div>
             <small class="form-text text-muted">You will be required to verify this email address</small>
         </div>
@@ -37,7 +37,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-flask"></i> </span>
                 </div>
-                <input name="" class="form-control" placeholder="Discipline" type="text">
+                <input type="text" class="form-control" id="user.attributes.discipline" name="user.attributes.discipline" value="${(register.formData['user.attributes.discipline']!'')}" placeholder="Discipline">
             </div>
             <small class="form-text text-muted">Your primary academic discipline</small>
         </div>
@@ -47,27 +47,30 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-building"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Institute name" type="text">
+                    <input type="text" class="form-control" id="user.attributes.institute" name="user.attributes.institute" value="${(register.formData['user.attributes.institute']!'')}" placeholder="Institute name">
                 </div>
                 <small class="form-text text-muted">The name of the instition you are associated with</small>
             </div>
             <div class="form-group col-md-4">
-                <input name="" class="form-control" placeholder="Institute type" type="text">
+                <input type="text" class="form-control" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="Institute type">
                 <small class="form-text text-muted">The type of institution, e.g. "Academic"</small>
             </div>
             <div class="form-group col-md-4">
-                <input name="" class="form-control" placeholder="Institute country" type="text">
+                <input type="text" class="form-control" id="user.attributes.instituteCountry" name="user.attributes.instituteCountry" value="${(register.formData['user.attributes.instituteCountry']!'')}" placeholder="Institute country">
                 <small class="form-text text-muted">The country where your institute is based</small>
             </div>
         </div>
     </div>
     <div class="mt-2">
         <h4>Account details</h4>
-        <div class="form-group input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-pencil-alt"></i> </span>
+                </div>
+                <input type="text" id="username" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" placeholder="${msg('username')} *">
             </div>
-            <input name="" class="form-control" placeholder="Username" type="text">
+            <small class="form-text text-muted">This will be a unique ID associated with your account</small>
         </div>
         <div class="form-row form-row">
             <div class="formColumn form-group col-md-12 mb-0" >
@@ -75,8 +78,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Create password *" type="text">
-                    <input name="" class="form-control" placeholder="Repeat password *" type="text">
+                    <input type="password" id="password" class="${properties.kcInputClass!}" name="password" autocomplete="new-password" placeholder="${msg('password')} *">
+                    <input type="password" id="password-confirm" class="${properties.kcInputClass!}" name="password-confirm" placeholder="${msg('passwordConfirm')} *">
                 </div>
             </div>
         </div>
