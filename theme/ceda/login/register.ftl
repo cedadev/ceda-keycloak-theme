@@ -52,8 +52,8 @@
                 <small class="form-text text-muted">The name of the instition you are associated with</small>
             </div>
             <div class="form-group col-md-4">
-                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="">
-                    <option selected><span class="text-muted">Select institute type...</span></option>
+                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" required value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="">
+                    <option selected disabled value=""><span class="text-muted">Select institute type...</span></option>
                     <option value="Academic">Academic</option>
                     <option value="Commercial">Commercial</option>
                 </select>

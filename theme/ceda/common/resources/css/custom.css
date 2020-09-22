@@ -18,6 +18,9 @@
     margin-top: -30px;
     left: 100%;
 }
+select option[disabled]:first-child {
+	display: none;
+}
 @media (max-width: 992px) {
     .dropdown-menu{
         width: 50%;
