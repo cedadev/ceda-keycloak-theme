@@ -11,6 +11,11 @@
         <div class="col-md-2 subtitle">
             <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
         </div>
+        <div class="col-md-10">
+            <div class="alert alert-warning text-center">
+                    <div style="margin-bottom: 0.4em;"><i class="fa fa-fw fa-exclamation-triangle"></i> Warning: changing your account information may affect your eligibility for certain services</div>
+            </div>
+        </div>
     </div>
 
     <form action="${url.accountUrl}" class="form-horizontal" method="post">
