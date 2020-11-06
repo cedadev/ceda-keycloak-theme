@@ -20,7 +20,6 @@
                 <li class="<#if active=='social'>active</#if>" href="${url.socialUrl}">${msg("federatedIdentity")}</a>
                 </#if>
                 <a class="nav-link <#if active=='sessions'>active</#if>" href="${url.sessionsUrl}">${msg("sessions")}</a>
-                <a class="nav-link <#if active=='applications'>active</#if>" href="${url.applicationsUrl}">${msg("applications")}</a>
                 <#if features.log>
                 <a class="nav-link <#if active=='log'>active</#if>" href="${url.logUrl}">${msg("log")}</a>
                 </#if>
