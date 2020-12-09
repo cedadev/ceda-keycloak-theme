@@ -65,11 +65,18 @@
         </div>
 
         <div class="form-group">
+            <div class="col-sm-10 col-md-10">
+                <input type="checkbox" class="form-control form-checkbox" id="termsConditions" name="termsConditions" value="termsConditions" required/>
+                <label for="termsConditions" class="control-label">Please confirm you have read and agree to the <a href>terms and conditions<a></label> <span class="required">*</span>
+            </div>
+        </div>
+
+        <div class="form-group">
             <div id="kc-form-buttons" class="col-md-offset-2 col-md-10 submit">
                 <div class="">
                     <#if url.referrerURI??><a href="${url.referrerURI}">${kcSanitize(msg("backToApplication")?no_esc)}</a></#if>
                     <button type="submit" class="btn-primary ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" name="submitAction" value="Save">${msg("doSave")}</button>
-                    <button type="submit" class="btn-primary ${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}" name="submitAction" value="Cancel">${msg("doCancel")}</button>
+                    <button type="submit" formnovalidate="formnovalidate" class="btn-primary ${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}" name="submitAction" value="Cancel">${msg("doCancel")}</button>
                 </div>
             </div>
         </div>
