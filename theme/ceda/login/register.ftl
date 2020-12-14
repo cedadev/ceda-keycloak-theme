@@ -94,7 +94,7 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
         </div>
-        <p class="text-center">Have an account? <a href="">Log In</a> </p>
+        <p class="text-center">Have an account? <a href="${url.loginUrl}">Log In</a> </p>
     </div>
 </form>
 </div>
