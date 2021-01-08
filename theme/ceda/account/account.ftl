@@ -89,11 +89,11 @@
 
         <div class="form-group row ${messagesPerField.printIfExists('user.attributes.instituteType','has-error')}">
             <div class="col-sm-2 col-md-2">
-                <label for="user.attributes.instituteType" class="control-label">Institute type</label>
+                <label for="user.attributes.instituteType" class="control-label">Institute type</label> <span class="required">*</span>
             </div>
 
             <div class="col-sm-10 col-md-10">
-                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(account.attributes.instituteType!'')}">
+                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" required value="${(account.attributes.instituteType!'')}">
                     <option selected disabled><span class="text-muted">${(account.attributes.instituteType!'')}</span></option>
                     <option value="Academic">Academic</option>
                     <option value="Commercial">Commercial</option>
