@@ -2,7 +2,7 @@
  * Customisations to the login view.
  */
 
- .dropdown-submenu{
+.dropdown-submenu{
     position: relative;
 }
 .dropdown-submenu a::after{
