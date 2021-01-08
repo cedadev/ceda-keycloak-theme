@@ -89,11 +89,12 @@
         </div>
     </div>
     <div class="mt-3">
-        <p>Before proceeding, you must confirm that you are over the age of 18 and have read and agree with our <a href="">terms and conditions</a></p>
+        <input type="checkbox" class="form-control form-checkbox" id="termsConditions" name="termsConditions" required/>
+        <label for="termsConditions" class="control-label">Before proceeding, you must confirm that you are over the age of 18 and have read and agree with our <a href="">terms and conditions</a></label><span class="required">*</span>
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
         </div>
-        <p class="text-center">Have an account? <a href="">Log In</a> </p>
+        <p class="text-center">Have an account? <a href="${url.loginUrl}">Log In</a> </p>
     </div>
 </form>
 </div>

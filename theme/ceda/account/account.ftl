@@ -11,6 +11,11 @@
         <div class="col-md-2 subtitle">
             <span class="subtitle"><span class="required">*</span> ${msg("requiredFields")}</span>
         </div>
+        <div class="col-md-10">
+            <div class="alert alert-warning text-center">
+                    <div style="margin-bottom: 0.4em;"><i class="fa fa-fw fa-exclamation-triangle"></i> Warning: changing your account information may affect your eligibility for certain services</div>
+            </div>
+        </div>
     </div>
 
     <form action="${url.accountUrl}" class="form-horizontal" method="post">
@@ -59,12 +64,63 @@
             </div>
         </div>
 
+        <div class="form-group ${messagesPerField.printIfExists('user.attributes.discipline','has-error')}">
+            <div class="col-sm-2 col-md-2">
+                <label for="user.attributes.discipline" class="control-label">Discipline</label>
+            </div>
+
+            <div class="col-sm-10 col-md-10">
+                <input type="text" class="form-control" id="user.attributes.discipline" name="user.attributes.discipline" value="${(account.attributes.discipline!'')}">
+            </div>
+        </div>
+
+        <div class="form-group ${messagesPerField.printIfExists('user.attributes.institute','has-error')}">
+            <div class="col-sm-2 col-md-2">
+                <label for="user.attributes.institute" class="control-label">Institute</label>
+            </div>
+
+            <div class="col-sm-10 col-md-10">
+                <input type="text" class="form-control" id="user.attributes.institute" name="user.attributes.institute" value="${(account.attributes.institute!'')}">
+            </div>
+        </div>
+
+        <div class="form-group ${messagesPerField.printIfExists('user.attributes.instituteType','has-error')}">
+            <div class="col-sm-2 col-md-2">
+                <label for="user.attributes.instituteType" class="control-label">Institute type</label>
+            </div>
+
+            <div class="col-sm-10 col-md-10">
+                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(account.attributes.instituteType!'')}">
+                    <option selected disabled><span class="text-muted">${(account.attributes.instituteType!'')}</span></option>
+                    <option value="Academic">Academic</option>
+                    <option value="Commercial">Commercial</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group ${messagesPerField.printIfExists('user.attributes.instituteCountry','has-error')}">
+            <div class="col-sm-3 col-md-3">
+                <label for="user.attributes.instituteCountry" class="control-label">Institute country</label>
+            </div>
+
+            <div class="col-sm-10 col-md-10">
+                <input type="text" class="form-control" id="user.attributes.instituteCountry" name="user.attributes.instituteCountry" value="${(account.attributes.instituteCountry!'')}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-10 col-md-10">
+                <input type="checkbox" class="form-control form-checkbox" id="termsConditions" name="termsConditions" value="termsConditions" required/>
+                <label for="termsConditions" class="control-label">Please confirm you have read and agree to the <a href>terms and conditions<a></label> <span class="required">*</span>
+            </div>
+        </div>
+
         <div class="form-group">
             <div id="kc-form-buttons" class="col-md-offset-2 col-md-10 submit">
                 <div class="">
                     <#if url.referrerURI??><a href="${url.referrerURI}">${kcSanitize(msg("backToApplication")?no_esc)}</a></#if>
                     <button type="submit" class="btn-primary ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonLargeClass!}" name="submitAction" value="Save">${msg("doSave")}</button>
-                    <button type="submit" class="btn-primary ${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}" name="submitAction" value="Cancel">${msg("doCancel")}</button>
+                    <button type="submit" formnovalidate="formnovalidate" class="btn-primary ${properties.kcButtonClass!} ${properties.kcButtonDefaultClass!} ${properties.kcButtonLargeClass!}" name="submitAction" value="Cancel">${msg("doCancel")}</button>
                 </div>
             </div>
         </div>
