@@ -75,7 +75,11 @@
 
             <div class="col-sm-10 col-md-10">
                 <select class="custom-select text-muted" id="user.attributes.discipline" name="user.attributes.discipline" value="${(account.attributes.discipline!'')}" placeholder="">
-                    <option selected disabled value=""><span class="text-muted">${(account.attributes.discipline!'Select your primary academic discipline...')}</span></option>
+                    <#if account.attributes.discipline??>
+                    <option selected value="${account.attributes.discipline}"><span class="text-muted">${account.attributes.discipline}</span></option>
+                    <#else>
+                    <option selected disabled value=""><span class="text-muted">Select your primary academic discipline...</span></option>
+                    </#if>
                     <@attributes.disciplines />
                 </select>
             </div>
@@ -115,7 +119,11 @@
 
             <div class="col-sm-10 col-md-10">
                 <select class="custom-select text-muted" id="user.attributes.instituteCountry" name="user.attributes.instituteCountry" value="${(account.attributes.instituteCountry!'')}" placeholder="">
-                    <option selected disabled value=""><span class="text-muted">${(account.attributes.instituteCountry!'Select institute country...')}</span></option>
+                    <#if account.attributes.instituteCountry??>
+                    <option selected value="${account.attributes.instituteCountry}"><span class="text-muted">${account.attributes.instituteCountry}</span></option>
+                    <#else>
+                    <option selected disabled value=""><span class="text-muted">Select institute country...</span></option>
+                    </#if>
                     <@attributes.countries />
                 </select>
             </div>

@@ -39,7 +39,11 @@
                     <span class="input-group-text"> <i class="fa fa-flask"></i> </span>
                 </div>
                 <select class="custom-select text-muted" id="user.attributes.discipline" name="user.attributes.discipline" value="${(register.formData['user.attributes.discipline']!'')}" placeholder="">
-                    <option selected disabled value=""><span class="text-muted">${(register.formData['user.attributes.discipline']!'Select your primary academic discipline...')}</span></option>
+                    <#if register.formData['user.attributes.discipline']??>
+                    <option selected value="${register.formData['user.attributes.discipline']}"><span class="text-muted">${register.formData['user.attributes.discipline']}</span></option>
+                    <#else>
+                    <option selected disabled value=""><span class="text-muted">Select your primary academic discipline...</span></option>
+                    </#if>
                     <@attributes.disciplines />
                 </select>
             </div>
@@ -67,7 +71,11 @@
             </div>
             <div class="form-group col-md-4">
                 <select class="custom-select text-muted" id="user.attributes.instituteCountry" name="user.attributes.instituteCountry" value="${(register.formData['user.attributes.instituteCountry']!'')}" placeholder="">
-                    <option selected disabled value=""><span class="text-muted">${(register.formData['user.attributes.instituteCountry']!'Select institute country...')}</span></option>
+                    <#if register.formData['user.attributes.instituteCountry']??>
+                    <option selected value="${register.formData['user.attributes.instituteCountry']}"><span class="text-muted">${register.formData['user.attributes.instituteCountry']}</span></option>
+                    <#else>
+                    <option selected disabled value=""><span class="text-muted">Select institute country...</span></option>
+                    </#if>
                     <@attributes.countries />
                 </select>
                 <small class="form-text text-muted">The country where your institute is based</small>
