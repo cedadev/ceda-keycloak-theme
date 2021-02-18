@@ -45,12 +45,28 @@
 </#if>
 
 <#if section = "content">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 right">
+            <ol class="breadcrumb bg-primary">
+                <li class="breadcrumb-item">
+                    <a class="breadcrumb-link text-light" style="text-decoration: none;" href="${url.accountUrl}">
+                        CEDA Account
+                    </a>
+                </li>
+                <li class="breadcrumb-item active">${active}</li>
+            </ol>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-12">
+        <div class="container">
         <div class="row">
-            <div class="bs-sidebar col-sm-3">
+            <div class="bs-sidebar col-lg-3">
+                <h4 class="mb-2">Account settings</h4>
                 <ul class="nav flex-column nav-pills">
-                    <a class="nav-link <#if active=='account'>active</#if>" href="${url.accountUrl}">${msg("account")}</a>
+                    <a class="nav-link <#if active=='account'>active</#if>" href="${url.accountUrl}">Profile</a>
                     <#if features.passwordUpdateSupported>
                     <a class="nav-link <#if active=='password'>active</#if>" href="${url.passwordUrl}">${msg("password")}</a>
                     </#if>
@@ -66,8 +82,13 @@
                     <a class="nav-link <#if active=='authorization'>active</#if>" href="${url.resourceUrl}">${msg("myResources")}</a>
                     </#if>
                 </ul>
+                <h4 class="mt-4 mb-2">Services</h4>
+                <ul class="nav flex-column nav-pills">
+                    <a class="nav-link" href="${properties.servicesPortalHomeUrl}">My services</a>
+                    <a class="nav-link" href="${properties.servicesPortalDiscoverUrl}">Discover services</a>
+                </ul>
             </div>
-            <div class="col-sm-9 content-area">
+            <div class="col-lg-9 content-area">
                 <#if message?has_content>
                     <#if message.type=='success' >
                     <div class="alert alert-with-icon alert-success" role="alert">
@@ -91,6 +112,7 @@
 
                 <#nested "content">
             </div>
+        </div>
         </div>
     </div>
 </div>
