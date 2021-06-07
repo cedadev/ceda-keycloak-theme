@@ -1,12 +1,10 @@
 <#import "template.ftl" as layout>
 <#import "attributes.ftl" as attributes>
-<@layout.registrationLayout; section>
+<@layout.registrationLayout headerCentered=true; section>
 
-<#if section = "header"></#if>
+<#if section = "header">Create a CEDA Account</#if>
 
 <#if section = "form">
-<div class="">
-<h1 class="text-center">Create a CEDA Account</h1>
 <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
     <div class="mb-2 mt-4">
         <h4>Personal details</h4>
