@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="alert alert-warning text-center">
-                <div style="margin-bottom: 0.4em;"><i class="fa fa-fw fa-exclamation-triangle"></i> Warning: changing your account information may affect your eligibility for certain services</div>
+                <div style="margin-bottom: 0.4em;"><i class="fa fa-fw fa-exclamation-triangle"></i> Warning: changing your account information may affect your eligibility for certain datasets</div>
             </div>
         </div>
     </div>
@@ -66,6 +66,25 @@
             <div class="col-sm-10 col-md-10">
                 <input type="text" class="form-control" id="lastName" name="lastName" value="${(account.lastName!'')}"/>
             </div>
+        </div>
+
+        <div class="form-group row ${messagesPerField.printIfExists('lastName','has-error')}">
+            <div class="col-sm-2 col-md-2">
+                <label for="linkedJASMINAccount" class="control-label">Linked JASMIN account</label> 
+            </div>
+            <#if account.attributes.linkedJASMINAccount??>
+            <div class="col-sm-10 col-md-10">
+                <input type="text" class="form-control" id="linkedJASMINAccount" name="linkedJASMINAccount" disabled="disabled" value="${(account.linkedJASMINAccount!'')}">
+            </div>
+            <#else>
+            <div class="col-sm-8 col-md-8">
+                <input type="text" class="form-control" id="linkedJASMINAccount" name="linkedJASMINAccount" disabled="disabled" value="Not linked">
+            </div>
+            
+            <div class="col-sm-2 col-md-2">
+                <a for="linkedJASMINAccount" class="float-right btn btn-md btn-primary" style="color:white">Link Now</a> 
+            </div>
+            </#if>
         </div>
 
         <div class="form-group row ${messagesPerField.printIfExists('user.attributes.discipline','has-error')}">

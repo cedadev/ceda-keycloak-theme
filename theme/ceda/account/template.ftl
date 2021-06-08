@@ -82,10 +82,9 @@
                     <a class="nav-link <#if active=='authorization'>active</#if>" href="${url.resourceUrl}">${msg("myResources")}</a>
                     </#if>
                 </ul>
-                <h4 class="mt-4 mb-2">Services</h4>
+                <h4 class="mt-4 mb-2">Dataset Applications</h4>
                 <ul class="nav flex-column nav-pills">
-                    <a class="nav-link" href="${properties.servicesPortalHomeUrl}">My services</a>
-                    <a class="nav-link" href="${properties.servicesPortalDiscoverUrl}">Discover services</a>
+                    <a class="nav-link" href="${properties.servicesPortalHomeUrl}">My Dataset Applications</a>
                 </ul>
             </div>
             <div class="col-lg-9 content-area">
