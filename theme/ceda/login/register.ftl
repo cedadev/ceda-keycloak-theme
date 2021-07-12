@@ -6,7 +6,7 @@
 
 <#if section = "form">
 <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
-    <div class="mb-2 mt-4">
+    <div class="mb-2">
         <h4>Personal details</h4>
         <div class="form-row form-row">
             <div class="formColumn form-group col-md-12 mb-0" >

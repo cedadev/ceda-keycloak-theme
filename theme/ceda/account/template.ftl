@@ -81,6 +81,7 @@
                     <#if realm.userManagedAccessAllowed && features.authorization>
                     <a class="nav-link <#if active=='authorization'>active</#if>" href="${url.resourceUrl}">${msg("myResources")}</a>
                     </#if>
+                    <a class="nav-link" href="${properties.servicesPortalJasminLinkUrl}">Link JASMIN account</a>
                 </ul>
                 <h4 class="mt-4 mb-2">Services</h4>
                 <ul class="nav flex-column nav-pills">

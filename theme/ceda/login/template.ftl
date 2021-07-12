@@ -14,7 +14,7 @@
     <#nested "header">
 </h1>
 
-<div class="row">
+<div class="row mt-4">
     <div class="col-lg-4 col-md-5 col-sm-6">
         <div class="sponsor">
             <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
