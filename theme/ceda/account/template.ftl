@@ -70,7 +70,6 @@
                     <#if features.passwordUpdateSupported>
                     <a class="nav-link <#if active=='password'>active</#if>" href="${url.passwordUrl}">${msg("password")}</a>
                     </#if>
-                    <a class="nav-link <#if active=='totp'>active</#if>" href="${url.totpUrl}">${msg("authenticator")}</a>
                     <#if features.identityFederation>
                     <li class="<#if active=='social'>active</#if>" href="${url.socialUrl}">${msg("federatedIdentity")}</a>
                     </#if>
@@ -81,11 +80,12 @@
                     <#if realm.userManagedAccessAllowed && features.authorization>
                     <a class="nav-link <#if active=='authorization'>active</#if>" href="${url.resourceUrl}">${msg("myResources")}</a>
                     </#if>
-                    <a class="nav-link" href="${properties.servicesPortalJasminLinkUrl}">Link JASMIN account</a>
+                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/account/jasmin/">Link JASMIN Account</a>
+                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/ftp/">Configure FTP Access</a>
                 </ul>
                 <h4 class="mt-4 mb-2">Dataset Applications</h4>
                 <ul class="nav flex-column nav-pills">
-                    <a class="nav-link" href="${properties.servicesPortalHomeUrl}">My Dataset Applications</a>
+                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/services/my_services/">My Dataset Applications</a>
                 </ul>
             </div>
             <div class="col-lg-9 content-area">
