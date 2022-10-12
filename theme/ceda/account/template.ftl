@@ -79,7 +79,7 @@
                     <#if realm.userManagedAccessAllowed && features.authorization>
                     <a class="nav-link <#if active=='authorization'>active</#if>" href="${url.resourceUrl}">${msg("myResources")}</a>
                     </#if>
-                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/ftp/">FTP Account</a>
+                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/account/ftp/">FTP Account</a>
                 </ul>
                 <h4 class="mt-4 mb-2">Archive Access</h4>
                 <ul class="nav flex-column nav-pills">
