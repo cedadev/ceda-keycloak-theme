@@ -73,19 +73,17 @@
                     <#if features.identityFederation>
                     <li class="<#if active=='social'>active</#if>" href="${url.socialUrl}">${msg("federatedIdentity")}</a>
                     </#if>
-                    <a class="nav-link <#if active=='sessions'>active</#if>" href="${url.sessionsUrl}">${msg("sessions")}</a>
                     <#if features.log>
                     <a class="nav-link <#if active=='log'>active</#if>" href="${url.logUrl}">${msg("log")}</a>
                     </#if>
                     <#if realm.userManagedAccessAllowed && features.authorization>
                     <a class="nav-link <#if active=='authorization'>active</#if>" href="${url.resourceUrl}">${msg("myResources")}</a>
                     </#if>
-                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/account/jasmin/">Link JASMIN Account</a>
-                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/ftp/">Configure FTP Access</a>
+                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/ftp/">FTP Account</a>
                 </ul>
-                <h4 class="mt-4 mb-2">Dataset Applications</h4>
+                <h4 class="mt-4 mb-2">Archive Access</h4>
                 <ul class="nav flex-column nav-pills">
-                    <a class="nav-link" href="${properties.servicesPortalBaseUrl}/services/my_services/">My Dataset Applications</a>
+                    <a class="nav-link" href="https://services.ceda.ac.uk/cedasite/myceda/user/">My Archive Access</a>
                 </ul>
             </div>
             <div class="col-lg-9 content-area">
