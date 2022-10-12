@@ -16,8 +16,8 @@
                         <#if message?has_content && message.summary=='Invalid username or password.'>
                         <div class="alert alert-with-icon alert-warning" role="alert">
                             <i class="fa fa-exclamation-triangle"></i> <span>Invalid username or password.
-                            <br />If your account was created before DATE, you will need to reset your password.
-                            <br />Please follow <a href="${url.loginResetCredentialsUrl}">this link</a> to create a new password for your CEDA account.</span>
+                            <br />We've been making changes to CEDA accounts. If you have an old account and haven't reset your password recently, it may no longer work.
+                            <br />Please follow <a href="https://auth.ceda.ac.uk/password/reset/">this link</a> to set a new login password, or click "Reset Password".</span>
                         </div>
                         <#else>
                         <#if message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
@@ -83,10 +83,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <p>
-                            <a href="${url.registrationUrl}" class="btn btn-lg btn-primary btn-block" >${msg("doRegister")}</a>
+                            <a href="https://services.ceda.ac.uk/cedasite/register/info/" class="btn btn-lg btn-primary btn-block" >${msg("doRegister")}</a>
                         </p>
                         <p class="justify-content-around border border-light border-bottom-0 border-left-0 border-right-0 lead pt-2">
-                            <a href="${url.loginResetCredentialsUrl}">${msg("doResetPassword")}</a>
+                            <a href="https://auth.ceda.ac.uk/password/reset/">${msg("doResetPassword")}</a>
                         </p>
                         <p class="justify-content-around border border-light border-bottom-0 border-left-0 border-right-0 lead pt-2">
                             Problems logging on? Contact <a href="http://www.ceda.ac.uk/contact">CEDA</a> support for help
