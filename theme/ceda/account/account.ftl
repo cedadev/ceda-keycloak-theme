@@ -4,6 +4,23 @@
 
 <#if section = "content">
     <div class="row">
+        <div class="col-md-10">
+            <h2>${msg("editAccountHtmlTitle")}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <p>This page is currently under construction. Please click the link below to edit your account details:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <a href="https://services.ceda.ac.uk/cedasite/myceda/user/" class="btn btn-primary btn-lg">Edit CEDA Account</a>
+        </div>
+    </div>
+</#if>
+<#if false>
+    <div class="row">
         <div class="col-md-12">
             <div class="alert alert-warning text-center">
                 <div style="margin-bottom: 0.4em;"><i class="fa fa-fw fa-exclamation-triangle"></i> Warning: changing your account information may affect your eligibility for certain services</div>

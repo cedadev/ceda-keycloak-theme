@@ -37,8 +37,8 @@
         ${(account.username!'')}<span class="caret"></span>
     </a>
     <ul class="dropdown-menu px-2">
-        <li><a href="${url.accountUrl}"><i class="fa fa-user fa-fw"></i> My account</a></li>
-        <li><a href="${url.passwordUrl}"><i class="fa fa-lock fa-fw"></i> Change password</a></li>
+        <li><a href="https://services.ceda.ac.uk/cedasite/myceda/user/"><i class="fa fa-user fa-fw"></i> My account</a></li>
+        <li><a href="https://services.ceda.ac.uk/cedasite/myceda/passwd/"><i class="fa fa-lock fa-fw"></i> Change password</a></li>
         <li><a href="${url.logoutUrl}"><i class="fa fa-sign-out-alt fa-fw"></i> Sign out</a></li>
     </ul>
 </div>

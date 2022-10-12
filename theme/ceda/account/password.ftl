@@ -3,6 +3,23 @@
 
 <#if section = "content">
     <div class="row">
+        <div class="col-md-10">
+            <h2>${msg("changePasswordHtmlTitle")}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <p>This page is currently under construction. Please click the link below to change your password:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <a href="https://services.ceda.ac.uk/cedasite/myceda/user/" class="btn btn-primary btn-lg">Edit Account Password</a>
+        </div>
+    </div>
+</#if>
+<#if false>
+    <div class="row">
         <div class="col-md-9">
             <h2>${msg("changePasswordHtmlTitle")}</h2>
         </div>
