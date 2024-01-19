@@ -8,6 +8,36 @@
         <meta name="robots" content="noindex, nofollow">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <style>
+            .siteFooterBar {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                height: 78px;
+                color: #212529;
+            }
+            .siteFooter {
+                display: block;
+                padding: 10px;
+                margin: 0px auto;
+                text-align: center;
+                font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                font-size: 80%;
+                font-weight: 400;
+                line-height: 1.5;
+                width:1000px;
+            }
+            .siteFooter img {
+                height:58px;
+            }
+            .siteFooterText {
+                text-align: center !important;
+            }
+            .siteFooterText a {
+                color: #b9bc2d
+            }
+        </style>
+
         <script>
             <#if properties.developmentMode?has_content && properties.developmentMode == "true">
             var developmentMode = true;

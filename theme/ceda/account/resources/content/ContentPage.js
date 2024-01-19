@@ -54,7 +54,31 @@ export class ContentPage extends React.Component {
       icon: /*#__PURE__*/React.createElement(SyncAltIcon, null)
     }, /*#__PURE__*/React.createElement(Msg, {
       msgKey: "refresh"
-    })))))), this.props.children);
+    })))))), this.props.children,
+
+    React.createElement(PageSection, {variant: PageSectionVariants.light,className: "pf-u-pb-xs"},
+      React.createElement("div", { className: "siteFooterBar" },
+        React.createElement("div", { className: "siteFooter" },
+          React.createElement("a", {href: "http://www.ncas.ac.uk", title: "NCAS"},
+            React.createElement("img", {src: "https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.2/_assets/img/ncas_logo_transparent_blacktext.png", title: "NCAS logo", alt: "NCAS logo", style: {"float": "left"}}, null)
+          ),
+          React.createElement("p", { className: "siteFooterText" },
+            "Copyright © 2018 ", React.createElement("a", {href: "http://www.stfc.ac.uk"}, "STFC"), " All Rights Reserved",
+            React.createElement("br", null, null),
+            React.createElement("a", {href: "http://www.ceda.ac.uk/accessibility"}, "Accessibility"), " | ",
+            React.createElement("a", {href: "http://www.ceda.ac.uk/disclaimer"}, "Disclaimer"), " | ",
+            React.createElement("a", {href: "http://www.ceda.ac.uk/privacy-and-cookies/"}, "Privacy and Cookies"),
+            React.createElement("br", null, null),
+            React.createElement("a", {href: "http://www.ceda.ac.uk"}, "CEDA")
+          ),
+          React.createElement("a", {href: "http://www.nceo.ac.uk", title: "NCEO"},
+            React.createElement("img", {src: "https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.2/_assets/img/nceologo200.png", title: "NCEO logo", alt: "NCEO logo", style: {"float": "right"}}, null)
+          ),
+        )
+      )
+    )
+
+    );
   }
 }
 ;
