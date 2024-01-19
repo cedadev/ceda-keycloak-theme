@@ -15170,7 +15170,7 @@ label.pf-c-menu__item:where(:not([disabled], .pf-m-disabled)) {
   --pf-c-nav__item__item__toggle--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav__item__toggle-icon--Rotate: 0;
   --pf-c-nav__item--m-expanded__toggle-icon--Rotate: 90deg;
-  --pf-c-nav__item--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__item--before--BorderColor: var(--pf-global--palette--black-300);
   --pf-c-nav__item--before--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__link--FontSize: var(--pf-global--FontSize--md);
   --pf-c-nav__link--FontWeight: var(--pf-global--FontWeight--normal);
@@ -15180,18 +15180,18 @@ label.pf-c-menu__item:where(:not([disabled], .pf-m-disabled)) {
   --pf-c-nav__link--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-nav__link--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__link--xl--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-nav__link--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav__link--hover--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav__link--focus--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav__link--active--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav__link--m-current--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav__link--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav__link--hover--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav__link--focus--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav__link--active--Color: var(--pf-global--Color--dark-100);
+  --pf-c-nav__link--m-current--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav__link--BackgroundColor: transparent;
-  --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
+  --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-400);
   --pf-c-nav__link--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-nav__link--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__link--before--BorderColor: var(--pf-global--palette--black-300);
   --pf-c-nav__link--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__link--hover--before--BorderBottomWidth: 0;
   --pf-c-nav__link--focus--before--BorderBottomWidth: 0;
@@ -16658,7 +16658,7 @@ label.pf-c-menu__item:where(:not([disabled], .pf-m-disabled)) {
 
 .pf-c-page {
   --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-page__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-page__header--BackgroundColor: #00628d;
   --pf-c-page__header--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-page__header--MinHeight: 4.75rem;
   --pf-c-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
@@ -16694,7 +16694,7 @@ label.pf-c-menu__item:where(:not([disabled], .pf-m-disabled)) {
   --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: transparent;
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-page__sidebar--Width: 18.125rem;
-  --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+  --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-page__sidebar--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--m-light--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__sidebar--m-light--BorderRightColor: var(--pf-global--BorderColor--100);
