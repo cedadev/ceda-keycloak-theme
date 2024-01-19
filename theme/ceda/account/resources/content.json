@@ -22,6 +22,13 @@
         "componentName": "SigningInPage"
       },
       {
+        "id": "device-activity",
+        "path": "security/device-activity",
+        "label": "deviceActivitySidebarTitle",
+        "modulePath": "/content/device-activity-page/DeviceActivityPage.js",
+        "componentName": "DeviceActivityPage"
+      },
+      {
         "id": "linked-accounts",
         "path": "security/linked-accounts",
         "label": "linkedAccountsSidebarTitle",
@@ -32,41 +39,13 @@
     ]
   },
   {
-    "id": "services-portal",
+    "id": "applications",
     "icon": "pf-icon-applications",
-    "path": "services",
-    "label": "Archive Access",
-    "descriptionLabel": "Manage your access to the CEDA Archive",
-    "content": [
-      {
-        "id": "services-archive",
-        "path": "services/archive",
-        "label": "My Archive Access",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "ServicesLink"
-      },
-      {
-        "id": "services-ftp",
-        "path": "services/ftp",
-        "label": "FTP Login",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "FtpLink"
-      },
-      {
-        "id": "services-token",
-        "path": "services/token",
-        "label": "Access Tokens",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "TokenLink"
-      },
-      {
-        "id": "services-jasmin",
-        "path": "services/jasmin",
-        "label": "JASMIN Account Link",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "JasminLink"
-      }
-    ]
+    "path": "applications",
+    "label": "applications",
+    "descriptionLabel": "applicationsIntroMessage",
+    "modulePath": "/content/applications-page/ApplicationsPage.js",
+    "componentName": "ApplicationsPage"
   },
   {
     "id": "groups",
