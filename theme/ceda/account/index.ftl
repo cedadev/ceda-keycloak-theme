@@ -36,6 +36,32 @@
             .siteFooterText a {
                 color: #b9bc2d
             }
+            .cedaPageHeader {
+                cursor: auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            .cedaPageHeader ul {
+                list-style: none;
+                margin-right: 10px;
+                margin-top: 20px;
+            }
+            .cedaPageHeader li {
+                display: inline;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+            .cedaPageHeader a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .cedaPageHeader a:hover {
+                color: #b9bc2d;
+                text-decoration: none;
+            }
+            .pf-c-page__header-brand-link {
+                text-decoration: none;
+            }
         </style>
 
         <script>

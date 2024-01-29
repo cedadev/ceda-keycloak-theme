@@ -39,7 +39,8 @@ export class App extends React.Component {
       this.context.login();
     }
     const Header = /*#__PURE__*/React.createElement(PageHeader, {
-      logo: /*#__PURE__*/React.createElement("a", {
+      logo: React.createElement("div", { className: "cedaPageHeader"
+      }, /*#__PURE__*/React.createElement("a", {
         id: "brandLink",
         href: brandUrl
       }, /*#__PURE__*/React.createElement(Brand, {
@@ -47,8 +48,31 @@ export class App extends React.Component {
         alt: "Logo",
         className: "brand"
       })),
+      React.createElement("div", null,
+        React.createElement("ul", null,
+          React.createElement("li", null,
+            React.createElement("a", { href: "https://catalogue.ceda.ac.uk" }, "Search Catalogue"),
+          ),
+          React.createElement("li", null,
+            React.createElement("a", { href: "https://data.ceda.ac.uk" }, "Get Data"),
+          ),
+          React.createElement("li", null,
+            React.createElement("a", { href: "https://help.ceda.ac.uk" }, "Help"),
+          ),
+          React.createElement("li", null,
+            React.createElement("a", { href: "https://archive.ceda.ac.uk/tools" }, "Tools"),
+          ),
+          React.createElement("li", null,
+            React.createElement("a", { href: "https://arrivals.ceda.ac.uk" }, "Deposit"),
+          ),
+          React.createElement("li", null,
+            React.createElement("a", { href: "https://ceda.ac.uk/blog" }, "News")
+          )
+        )
+      )
+      ),
       headerTools: /*#__PURE__*/React.createElement(PageHeaderTool, null),
-      showNavToggle: true
+      showNavToggle: false
     });
     const Sidebar = /*#__PURE__*/React.createElement(PageSidebar, {
       nav: /*#__PURE__*/React.createElement(PageNav, null)
