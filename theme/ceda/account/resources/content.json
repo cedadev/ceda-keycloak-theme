@@ -35,38 +35,10 @@
     "id": "services-portal",
     "icon": "pf-icon-applications",
     "path": "services",
-    "label": "Archive Access",
+    "label": "Archive access",
     "descriptionLabel": "Manage your access to the CEDA Archive",
-    "content": [
-      {
-        "id": "services-archive",
-        "path": "services/archive",
-        "label": "My Archive Access",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "ServicesLink"
-      },
-      {
-        "id": "services-ftp",
-        "path": "services/ftp",
-        "label": "FTP Login",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "FtpLink"
-      },
-      {
-        "id": "services-token",
-        "path": "services/token",
-        "label": "Access Tokens",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "TokenLink"
-      },
-      {
-        "id": "services-jasmin",
-        "path": "services/jasmin",
-        "label": "JASMIN Account Link",
-        "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
-        "componentName": "JasminLink"
-      }
-    ]
+    "modulePath": "/content/services-portal-pages/ServicesPortalPages.js",
+    "componentName": "ServicesLink"
   },
   {
     "id": "groups",
