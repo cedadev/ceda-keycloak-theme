@@ -59,7 +59,7 @@
                 <small class="form-text text-muted">The name of the instition you are associated with</small>
             </div>
             <div class="form-group col-md-4">
-                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" required value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="">
+                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="">
                     <#if register.formData['user.attributes.instituteType']??>
                     <option selected value="${register.formData['user.attributes.instituteType']}"><span class="text-muted">${register.formData['user.attributes.instituteType']}</span></option>
                     <#else>
