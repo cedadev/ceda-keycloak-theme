@@ -1,12 +1,14 @@
 <#import "template.ftl" as layout>
 <#import "attributes.ftl" as attributes>
-<@layout.registrationLayout headerCentered=true; section>
+<@layout.registrationLayout; section>
 
-<#if section = "header">Create a CEDA Account</#if>
+<#if section = "header"></#if>
 
 <#if section = "form">
+<div class="">
+<h1 class="text-center">Create a CEDA Account</h1>
 <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
-    <div class="mb-2">
+    <div class="mb-2 mt-4">
         <h4>Personal details</h4>
         <div class="form-row form-row">
             <div class="formColumn form-group col-md-12 mb-0" >
@@ -57,7 +59,7 @@
                 <small class="form-text text-muted">The name of the instition you are associated with</small>
             </div>
             <div class="form-group col-md-4">
-                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" required value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="">
+                <select class="custom-select text-muted" id="user.attributes.instituteType" name="user.attributes.instituteType" value="${(register.formData['user.attributes.instituteType']!'')}" placeholder="">
                     <#if register.formData['user.attributes.instituteType']??>
                     <option selected value="${register.formData['user.attributes.instituteType']}"><span class="text-muted">${register.formData['user.attributes.instituteType']}</span></option>
                     <#else>
