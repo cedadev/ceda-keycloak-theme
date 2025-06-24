@@ -54,10 +54,10 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <p>
-                            <a href="https://services.ceda.ac.uk/cedasite/register/info/" class="btn btn-lg btn-primary btn-block" >${msg("doRegister")}</a>
+                            <a href="${url.registrationUrl}" class="btn btn-lg btn-primary btn-block" >${msg("doRegister")}</a>
                         </p>
                         <p class="justify-content-around border border-light border-bottom-0 border-left-0 border-right-0 lead pt-2">
-                            <a href="https://auth.ceda.ac.uk/password/reset/">${msg("doForgotPassword")}</a>
+                            <a href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a>
                         </p>
                         <p class="justify-content-around border border-light border-bottom-0 border-left-0 border-right-0 lead pt-2">
                             Problems logging on? Contact <a href="http://www.ceda.ac.uk/contact">CEDA</a> support for help
