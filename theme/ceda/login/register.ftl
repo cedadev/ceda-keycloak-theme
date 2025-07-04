@@ -91,7 +91,7 @@
                 </div>
                 <input type="text" id="username" class="${properties.kcInputClass!}" name="username" value="${(register.formData.username!'')}" autocomplete="username" placeholder="${msg('username')} *">
             </div>
-            <small class="form-text text-muted">This will be a unique ID associated with your account</small>
+            <small class="form-text text-muted">This will be a unique ID associated with your account. Please use only lowercase letters and digits. Minimum length is 3 characters. Email addresses cannot be used.</small>
         </div>
         <div class="form-row form-row">
             <div class="formColumn form-group col-md-12 mb-0" >
