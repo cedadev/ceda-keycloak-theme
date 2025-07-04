@@ -103,6 +103,7 @@
                     <input type="password" id="password-confirm" class="${properties.kcInputClass!}" name="password-confirm" placeholder="${msg('passwordConfirm')} *">
                 </div>
             </div>
+            <small class="form-text text-muted">Password must be at least 8 characters in length and contain at least 1 uppercase letter, 1 lowercase letter and 1 digit</small>
         </div>
     </div>
     <div class="mt-3">
