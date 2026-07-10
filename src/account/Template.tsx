@@ -15,7 +15,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { msg, msgStr, currentLanguage, enabledLanguages } = i18n;
 
-    const { url, features, realm, message, referrer } = kcContext;
+    const { url, features, realm, message } = kcContext;
 
     useEffect(() => {
         document.title = msgStr("accountManagementTitle");
@@ -141,7 +141,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         <div className="navbar-full">
                             <ul className="nav flex-column nav-pills">
                                 <li className="nav-item">
-                                    <a className={`nav-link ${clsx(active === "account" && "active")}`} href={url.accountUrl}>{msg("account")}blalblalvla</a>
+                                    <a className={`nav-link ${clsx(active === "account" && "active")}`} href={url.accountUrl}>{msg("account")}</a>
                                 </li>
                                 {features.passwordUpdateSupported && (
                                     <li className="nav-item">
