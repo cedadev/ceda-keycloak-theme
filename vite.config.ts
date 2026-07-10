@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [
         react(),
         keycloakify({
-            accountThemeImplementation: "none",
+            accountThemeImplementation: "Multi-Page",
             keycloakVersionTargets: {
                 "22-to-25": false,
                 "all-other-versions": "ceda-keycloak-theme.jar"
