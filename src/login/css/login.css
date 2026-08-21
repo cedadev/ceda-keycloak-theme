@@ -4,7 +4,7 @@
 
 
 #kc-content {
-    padding-top: 120px;
+    max-width: 1140px;
 }
 .dropdown-submenu{
     position: relative;

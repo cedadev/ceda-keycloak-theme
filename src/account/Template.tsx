@@ -13,7 +13,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { kcClsx } = getKcClsx({ doUseDefaultCss, classes });
 
-    const { msg, msgStr, currentLanguage, enabledLanguages } = i18n;
+    const { msg, msgStr } = i18n;
 
     const { url, features, realm, message } = kcContext;
 
@@ -74,37 +74,32 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 </li>
                             </ul>
                         </div>
-                        <div id="kc-locale">
-                            <div id="kc-locale-wrapper">
-                                <div id="kc-locale-dropdown" className="menu-button-links dropdown">
-                                    <button
-                                        className="dropdown-toggle btn-outline-light btn"
-                                        tabIndex={1}
-                                        id="kc-current-locale-link"
-                                        aria-label="Languages"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                        aria-controls="language-switch1"
-                                    >
-                                        <i className="fas fa-globe"></i> {currentLanguage.label}
-                                    </button>
-                                    <div
-                                        role="menu"
-                                        tabIndex={-1}
-                                        aria-labelledby="dropdownMenuButton"
-                                        aria-activedescendant=""
-                                        id="language-switch1"
-                                        className="dropdown-menu"
-                                    >
-                                        {enabledLanguages.map(({ languageTag, label, href }, i) => (
-                                            <a key={languageTag} role="menuitem" id={`language-${i + 1}`} className="dropdown-item" href={href}>
-                                                {label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="dropdown">
+                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown button
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a className="dropdown-item" href="#">Action</a></li>
+                                <li><a className="dropdown-item" href="#">Another action</a></li>
+                                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </div>
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle ms-auto show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">wtucker</a>
+                                <ul className="dropdown-menu" data-bs-popper="none">
+                                    <li>
+                                        <a className="dropdown-item" href="https://services.ceda.ac.uk/cedasite/myceda/user/"><i className="fa fa-user fa-fw"></i> My account</a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="https://services.ceda.ac.uk/cedasite/myceda/passwd/"><i className="fa fa-lock fa-fw"></i> Change password</a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href={url.getLogoutUrl()}><i className="fa fa-sign-out-alt fa-fw"></i> {msg("doSignOut")}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </header>
@@ -129,8 +124,8 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     <div className="row">
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item"><a href="/">CEDA Services</a></li>
-                                <li className="breadcrumb-item active" aria-current="page">Datasets</li>
+                                <li className="breadcrumb-item"><a href="/">CEDA Account</a></li>
+                                <li className="breadcrumb-item active" aria-current="page">{active}</li>
                             </ol>
                         </nav>
                     </div>
@@ -200,6 +195,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                     </div>
                 </div>
             </div>
+
             <footer>
                 <div className="container">
                         <div className="row d-flex justify-content-around border border-light border-bottom-0 border-left-0 border-right-0 pt-5 pb-2 mt-5">

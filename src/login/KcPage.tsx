@@ -110,7 +110,7 @@ const classes = {
     kcLocaleMainClass: "",
     kcInputGroup: "input-group",
     kcTextareaClass: "form-control",
-    kcButtonBlockClass: "btn-block",
+    kcButtonBlockClass: "btn-block w-100",
     kcButtonClass: "btn",
     kcWebAuthnNFC: "fa fa-wifi",
     kcLocaleClass: "col-xs-12 col-sm-1",

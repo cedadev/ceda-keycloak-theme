@@ -9,8 +9,12 @@ export default defineConfig({
         keycloakify({
             accountThemeImplementation: "Multi-Page",
             keycloakVersionTargets: {
-                "22-to-25": false,
-                "all-other-versions": "ceda-keycloak-theme.jar"
+                "21-and-below": false,
+                "23": false,
+                "24": false,
+                "25": false,
+                "26.0-to-26.1": false,
+                "26.2-and-above": "ceda-keycloak-theme.jar"
             }
         })
     ]

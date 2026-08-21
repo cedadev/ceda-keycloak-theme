@@ -2,15 +2,12 @@
  * Customisations to the login view.
  */
 
-#kc-content {
-    padding-top: 120px;
-}
+
 header {
     padding-bottom: 120px;
 }
 
 .navbar-title {
-    background-image: url(login/img/logo.png);
     height: 25px;
     background-repeat: no-repeat;
     width: 123px;
