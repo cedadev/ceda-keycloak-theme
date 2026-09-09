@@ -9,9 +9,9 @@
 
 import { lazy, Suspense, type ReactNode } from "react";
 
-export type ThemeName = "ceda-keycloak-theme";
+export type ThemeName = "ceda";
 
-export const themeNames: ThemeName[] = ["ceda-keycloak-theme"];
+export const themeNames: ThemeName[] = ["ceda"];
 
 export type KcEnvName = never;
 

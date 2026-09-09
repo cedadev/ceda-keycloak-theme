@@ -120,7 +120,7 @@ const classes = {
     kcInputErrorMessageClass: "required kc-feedback-text text-danger",
     kcRecoveryCodesList: "kc-recovery-codes-list",
     kcFormSocialAccountListClass: "kc-social-links",
-    kcAlertTitleClass: "kc-feedback-text",
+    kcAlertTitleClass: "kc-feedback-text text-danger",
     kcAuthenticatorPasswordClass: "fa fa-unlock",
     kcCheckInputClass: "",
     "kcLogoIdP-linkedin": "fa fa-linkedin",

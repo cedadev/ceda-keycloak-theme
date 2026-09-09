@@ -15,7 +15,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { msg, msgStr } = i18n;
 
-    const { url, features, realm, message } = kcContext;
+    const { url, features, realm, message, account } = kcContext;
 
     useEffect(() => {
         document.title = msgStr("accountManagementTitle");
@@ -74,32 +74,16 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 </li>
                             </ul>
                         </div>
-                        <div className="dropdown">
-                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown button
-                            </button>
-                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                        <div>
+                            <span className="text-light">
+                                Signed in as <strong>{account.username}</strong>
+                            </span>
                         </div>
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle ms-auto show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">wtucker</a>
-                                <ul className="dropdown-menu" data-bs-popper="none">
-                                    <li>
-                                        <a className="dropdown-item" href="https://services.ceda.ac.uk/cedasite/myceda/user/"><i className="fa fa-user fa-fw"></i> My account</a>
-                                    </li>
-                                    <li>
-                                        <a className="dropdown-item" href="https://services.ceda.ac.uk/cedasite/myceda/passwd/"><i className="fa fa-lock fa-fw"></i> Change password</a>
-                                    </li>
-                                    <li>
-                                        <a className="dropdown-item" href={url.getLogoutUrl()}><i className="fa fa-sign-out-alt fa-fw"></i> {msg("doSignOut")}</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <div className="ms-auto">
+                            <a className="btn btn-link" href={url.getLogoutUrl()}>
+                                <i className="fa fa-sign-out-alt fa-fw"></i> {msg("doSignOut")}
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -183,7 +167,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                 {message.type === "success" && <span className="pficon pficon-ok"></span>}
                                 {message.type === "error" && <span className="pficon pficon-error-circle-o"></span>}
                                 <span
-                                    className="kc-feedback-text"
+                                    className="kc-feedback-text text-danger"
                                     dangerouslySetInnerHTML={{
                                         __html: kcSanitize(message.summary)
                                     }}
