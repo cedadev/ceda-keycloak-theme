@@ -189,13 +189,13 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                                     {msg("noAccount")}
                                                 </span>
                                                 <span>
-                                                    <a tabIndex={7} href={url.registrationUrl} className="btn btn-lg btn-primary btn-block">
+                                                    <a tabIndex={7} href={url.registrationUrl} className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}>
                                                         {msg("doRegister")}
                                                     </a>
                                                 </span>
                                             </div>
                                         </div>
-                                        <div className="justify-content-around border border-light border-bottom-0 border-left-0 border-right-0 lead py-2 mt-3">
+                                        <div className="justify-content-around border border-light border-bottom-0 border-start-0 border-end-0 lead py-2 mt-3">
                                             {realm.resetPasswordAllowed && (
                                                 <span>
                                                     <a tabIndex={8} href={url.loginResetCredentialsUrl}>
@@ -204,7 +204,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                                                 </span>
                                             )}
                                         </div>
-                                        <div className="justify-content-around border border-light border-bottom-0 border-left-0 border-right-0 lead pt-2">
+                                        <div className="justify-content-around border border-light border-bottom-0 border-start-0 border-end-0 lead pt-2">
                                             Problems logging on? Contact <a href="http://www.ceda.ac.uk/contact">CEDA</a> support for help
                                         </div>
                                     </div>
@@ -228,7 +228,6 @@ function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: s
     return (
         <div className={kcClsx("kcInputGroup")}>
             {children}
-            <div className="input-group-append">
             <button
                 type="button"
                 className={kcClsx("kcFormPasswordVisibilityButtonClass")}
@@ -238,7 +237,6 @@ function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: s
             >
                 <i className={kcClsx(isPasswordRevealed ? "kcFormPasswordVisibilityIconHide" : "kcFormPasswordVisibilityIconShow")} aria-hidden />
             </button>
-            </div>
         </div>
     );
 }

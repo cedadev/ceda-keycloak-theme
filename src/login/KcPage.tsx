@@ -27,7 +27,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                                 i18n={i18n}
                                 classes={classes}
                                 Template={Template}
-                                doUseDefaultCss={true}
+                                doUseDefaultCss={false}
                                 UserProfileFormFields={UserProfileFormFields}
                                 doMakeUserConfirmPassword={doMakeUserConfirmPassword}
                             />
@@ -110,7 +110,7 @@ const classes = {
     kcLocaleMainClass: "",
     kcInputGroup: "input-group",
     kcTextareaClass: "form-control",
-    kcButtonBlockClass: "btn-block",
+    kcButtonBlockClass: "btn-block w-100",
     kcButtonClass: "btn",
     kcWebAuthnNFC: "fa fa-wifi",
     kcLocaleClass: "col-xs-12 col-sm-1",
@@ -120,7 +120,7 @@ const classes = {
     kcInputErrorMessageClass: "required kc-feedback-text text-danger",
     kcRecoveryCodesList: "kc-recovery-codes-list",
     kcFormSocialAccountListClass: "kc-social-links",
-    kcAlertTitleClass: "kc-feedback-text",
+    kcAlertTitleClass: "kc-feedback-text text-danger",
     kcAuthenticatorPasswordClass: "fa fa-unlock",
     kcCheckInputClass: "",
     "kcLogoIdP-linkedin": "fa fa-linkedin",
